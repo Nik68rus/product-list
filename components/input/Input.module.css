@@ -1,0 +1,32 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.input input {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--line-color);
+  transition: all var(--trans-default);
+  cursor: pointer;
+  outline: none;
+  background-color: var(--color-input-bg);
+}
+
+.input input:hover,
+.input input:focus {
+  background-color: var(--color-input-focus);
+  border-color: var(--color-input-focus);
+}
+
+@media (min-width: 768px) {
+  .input input {
+    padding: 6px 12px;
+  }
+}

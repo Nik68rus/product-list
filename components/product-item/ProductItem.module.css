@@ -1,0 +1,94 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 300px;
+  z-index: 0;
+  padding: 16px;
+  padding-top: 45px;
+  color: white;
+  height: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.image {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+}
+
+.brand {
+  margin-top: auto;
+  font-size: 14px;
+}
+
+.actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--trans-default);
+}
+
+.product:hover .actions,
+.product:focus .actions,
+.product:focus-within .actions {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .product {
+    min-height: 200px;
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,23 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--line-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}

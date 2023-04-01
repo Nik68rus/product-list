@@ -1,0 +1,16 @@
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.input {
+  align-items: center;
+}
+
+.input input {
+  text-align: center;
+  width: 80px;
+}

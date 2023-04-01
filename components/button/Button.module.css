@@ -1,0 +1,55 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--color-default);
+  color: white;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: all var(--trans-default);
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn:hover,
+.btn:focus {
+  filter: brightness(0.85);
+}
+
+.btn--success {
+  background-color: var(--color-success);
+}
+
+.btn--danger {
+  background-color: var(--color-danger);
+}
+
+.btn--l {
+  padding: 14px 26px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn--inline {
+  width: auto;
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 6px 12px;
+    width: auto;
+  }
+
+  .btn--l {
+    padding: 10px 20px;
+  }
+}
