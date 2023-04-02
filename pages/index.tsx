@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const getProducts = async () => {
       const mockItems: IProduct[] = [];
-      const images = await getImages(100);
+      const images = await getImages('product', 100);
 
       for (let i = 0; i < 100; i++) {
         const item: IProduct = {
